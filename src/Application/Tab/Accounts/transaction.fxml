@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Tab.Accounts.TransactionController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <JFXTextField fx:id="txt_inv_no" labelFloat="true" prefHeight="30.0" promptText="Invoice Number" />
+            <JFXTextField fx:id="txt_desc" labelFloat="true" promptText="Description" />
+            <JFXTextField fx:id="txt_from" labelFloat="true" promptText="From" />
+            <JFXTextField fx:id="txt_to" labelFloat="true" promptText="To" />
+            <JFXTextField fx:id="txt_amount" labelFloat="true" promptText="Amount" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <AnchorPane prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#saveClicked" styleClass="action_button" stylesheets="@../../sohel.css" text="Save" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+            <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#cancelClicked" styleClass="action_button" stylesheets="@../../sohel.css" text="Cancel" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Invoice Number" wrappingWidth="112.580078125" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0" />
+      <Text fx:id="last_invoice" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

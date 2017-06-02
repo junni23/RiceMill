@@ -1,0 +1,45 @@
+.root_pane{
+	-fx-background-color: #708090;
+}
+.add_account{
+	-fx-background-color:  #e7e7e7;
+}
+
+.vbox{
+	-fx-background-color: #5f9ea0;
+}
+
+.menu_bar{
+	-fx-background-color: #dcdcdc;
+	-fx-font-family: verdana;
+	-fx-font-size: 14;
+}
+
+.action_button{
+	-fx-background-color: #00bfff;
+	-fx-font-family: verdana;
+	-fx-font-size: 16;
+	-fx-text-fill: white;
+}
+
+.action_button:hover{
+	-fx-background-color : #388e3c;
+}
+.text_field{
+	-fx-font-family: verdana;
+	-fx-font-size: 14;
+	-fx-text-fill: #000080;
+}
+
+.table-view{
+    -fx-background-color: #AAAAAA;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 2, 0.5, 1, 1);
+}
+
+.list-cell{
+    -fx-font-family: verdana;
+ 	-fx-font-size: 18;
+ 	-fx-text-fill: red;
+}

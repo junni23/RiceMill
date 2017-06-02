@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rooPane" prefHeight="350.0" prefWidth="350.0" stylesheets="@../../sohel.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Tab.Accounts.AddAccountController">
+   <children>
+      <VBox fx:id="vbox" prefHeight="300.0" prefWidth="330.0" spacing="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <JFXTextField fx:id="account_name" focusColor="#1b2828" labelFloat="true" promptText="Account name" styleClass="text_field" unFocusColor="#6b35c9">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="address" focusColor="#1b2828" labelFloat="true" layoutX="15.0" layoutY="25.0" promptText="Address" styleClass="text_field" unFocusColor="#6b35c9">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="contact" focusColor="#1b2828" labelFloat="true" layoutX="15.0" layoutY="25.0" promptText="Contact" styleClass="text_field" unFocusColor="#6b35c9">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="email" focusColor="#1b2828" labelFloat="true" layoutX="15.0" layoutY="66.0" promptText="Email" styleClass="text_field" unFocusColor="#6b35c9">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXComboBox fx:id="account_type" focusColor="#1b2828" prefHeight="25.0" prefWidth="362.0" promptText="Select Account Type" styleClass="text_field" unFocusColor="#6b35c9" />
+            <AnchorPane fx:id="radSection" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Label text="Is Loan Account" AnchorPane.topAnchor="10.0" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="200.0" spacing="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXRadioButton fx:id="radioYes" text="Yes" />
+                        <JFXRadioButton fx:id="radioNo" selected="true" text="No" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#addAccount" prefHeight="32.0" prefWidth="76.0" styleClass="action_button" text="Add" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+            <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="20.0" onAction="#cancelOperation" styleClass="action_button" text="Cancel" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
