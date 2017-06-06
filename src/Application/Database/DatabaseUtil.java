@@ -5,6 +5,10 @@ import Application.Model.Employee;
 import Application.Model.Salary;
 import Application.Model.Transaction;
 import Application.TableModel.SalaryData;
+import Application.TableModel.TotalSalary;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.chart.XYChart;
 
 import java.sql.ResultSet;
 import java.sql.Timestamp;
@@ -145,6 +149,27 @@ public class DatabaseUtil {
         }
 
         return retStr;
+    }
+
+    public ObservableList<TotalSalary> getTotalSalaryOfEmployee(){
+        ObservableList<TotalSalary> totalSalaries = FXCollections.observableArrayList();
+        String query = "SELECT e.employee_name,sum(s.salary_amount) as salary FROM rice_mill.tbl_employee as e inner join rice_mill.tbl_salary as s On e.employee_id = s.employee_id group by s.employee_id";
+        ResultSet resultSet = handler.executeQuery(query);
+
+        try{
+            while (resultSet.next()){
+                String name = resultSet.getString("employee_name");
+                double salary = resultSet.getDouble("salary");
+
+                TotalSalary totalSalary = new TotalSalary(name,salary);
+                totalSalaries.add(totalSalary);
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return totalSalaries;
     }
 
     public boolean transactEmployeeSalary(Salary salary){

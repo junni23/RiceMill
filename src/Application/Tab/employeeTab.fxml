@@ -51,6 +51,28 @@
                   </TableView>
                </children>
             </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="445.0" style="-fx-background-color: #ccddee;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="310.0">
+               <children>
+                  <TableView fx:id="tblTotalSalary" prefHeight="285.0" prefWidth="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                    <columns>
+                      <TableColumn fx:id="colEmployeeName" prefWidth="75.0" text="Employee Name" />
+                      <TableColumn fx:id="colTotalSalary" prefWidth="75.0" text="Total Salary" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #00bfff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text fill="#eeeeee" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Total Salary">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
          </children></AnchorPane>
       <AnchorPane fx:id="employeeDetailPane" prefHeight="300.0" prefWidth="595.0" style="-fx-background-color: #add8e6;" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
@@ -62,11 +84,6 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </padding>
             </VBox>
-            <Text fill="#1b1a1a" lineSpacing="1.0" stroke="#82ab9d75" strokeType="OUTSIDE" text="Employee Details" textAlignment="CENTER" wrappingWidth="591.999997600913" AnchorPane.topAnchor="10.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
             <JFXButton buttonType="RAISED" onAction="#updateEmployee" styleClass="action_button" stylesheets="@../sohel.css" text="Update" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
             <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="268.0" onAction="#paidSalary" styleClass="action_button" stylesheets="@../sohel.css" text="Paid Salary" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
             <Line endX="470.0" startX="-100.0" stroke="#7d3fe8e5" strokeWidth="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="32.0" />
@@ -129,16 +146,20 @@
                   </Text>
                </children>
             </GridPane>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #00bfff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="#eeeeee" lineSpacing="1.0" scaleY="1.5" stroke="#82ab9d75" strokeType="OUTSIDE" text="Employee Details" textAlignment="CENTER" wrappingWidth="114.66662357747555" />
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
-      <VBox prefHeight="300.0" prefWidth="250.0" spacing="12.0" style="-fx-background-color: #e6e9f2;" AnchorPane.leftAnchor="155.0" AnchorPane.topAnchor="5.0">
+      <VBox prefHeight="300.0" prefWidth="250.0" spacing="2.0" style="-fx-background-color: #e6e9f2;" AnchorPane.leftAnchor="155.0" AnchorPane.topAnchor="5.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Employee List" textAlignment="CENTER" wrappingWidth="252.13671875">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <Line endX="260.0" startX="10.0" stroke="#7d40e5e5" strokeWidth="1.5" />
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #00bfff;">
+               <children>
+                  <Text fill="#eeeeee" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee List" textAlignment="CENTER" wrappingWidth="252.13671875" />
+               </children>
+            </HBox>
             <JFXListView fx:id="employeeList" opacity="0.6" prefHeight="300.0" prefWidth="250.0" styleClass="list-cell" stylesheets="@../sohel.css" />
          </children>
       </VBox>

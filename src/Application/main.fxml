@@ -22,10 +22,10 @@
                      </content>
                   </Tab>
                   <Tab text="Accounts">
-                     <fx:include source="Tab/accountTab.fxml" />
+                     <fx:include fx:id="accountTab" source="Tab/accountTab.fxml" />
                   </Tab>
                   <Tab fx:id="tabEmployee" text="Employee">
-                     <fx:include source="Tab/employeeTab.fxml" />
+                     <fx:include fx:id="employeeTab" source="Tab/employeeTab.fxml" />
                   </Tab>
 
                </tabs>
